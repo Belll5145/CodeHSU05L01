@@ -1,4 +1,12 @@
 import java.text.DecimalFormat;
+
+/**
+ * @file Rectangle.java
+ * @date 2/2/23
+ * @author Landon Bell
+ *
+ *
+ */
 public class Rectangle { //make public for CS A
 
     //instance variables
@@ -24,10 +32,28 @@ public class Rectangle { //make public for CS A
 
 
     //accessors
+    public double getWidth(){
+        return width;
+    }
 
+    /**
+     *
+     * @return the width of the rectangle
+     */
+    public double getHeight(){
+        return height;
+    }
+
+    /**
+     *
+     * @return the height of the rectangle
+     */
 
 
     //mutators
+    public void setWidth(double newWidth){
+        width = newWidth;
+    }
 
 
     //other methods
@@ -36,5 +62,13 @@ public class Rectangle { //make public for CS A
 
 
     //toString method
+    /**
+     * Prints the height snd width of the rectangle to 2 decimal places
+     */
+    public String toString(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        return "The height of the rectangle is "+ df.format(height) +
+                " and the width is " + df.format(width) + ".";
+    }
 
 }
