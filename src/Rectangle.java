@@ -32,13 +32,19 @@ public class Rectangle { //make public for CS A
 
 
     //accessors
+    /**
+     *
+     * @return the width of the rectangle
+     */
     public double getWidth(){
         return width;
     }
 
+
+
     /**
      *
-     * @return the width of the rectangle
+     * @return the height of the rectangle
      */
     public double getHeight(){
         return height;
@@ -46,8 +52,19 @@ public class Rectangle { //make public for CS A
 
     /**
      *
-     * @return the height of the rectangle
+     * @return the area of the rectangle
      */
+    public double getArea(){
+        return area;
+    }
+
+    /**
+     *
+     * @return the perimeter of the rectangle
+     */
+    public double getPerimeter(){
+        return perimeter;
+    }
 
 
     //mutators
@@ -55,10 +72,31 @@ public class Rectangle { //make public for CS A
         width = newWidth;
     }
 
+    /**
+     * Modifies the height of the rectangle
+     * @param newHeight
+     */
+    public void setHeight(double newHeight){
+        height = newHeight;
+    }
 
     //other methods
 
+    /**
+     * Calculates the area of the rectangle
+     *
+     */
+    public void calculateArea(){
+        area = height*width;
+    }
 
+    /**
+     * Calculates the perimeter of the rectangle
+     *
+     */
+    public void calculatePerimeter(){
+        perimeter = (height*2)+(width*2);
+    }
 
 
     //toString method
